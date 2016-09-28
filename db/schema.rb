@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160928175146) do
+ActiveRecord::Schema.define(version: 20160928180343) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "profiles", force: :cascade do |t|
+    t.string  "name",    default: "Anonymous"
+    t.integer "points",  default: 0
+    t.integer "user_id"
+  end
 
   create_table "rooms", force: :cascade do |t|
     t.string  "title"
