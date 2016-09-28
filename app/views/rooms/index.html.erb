@@ -1,0 +1,15 @@
+<header>
+  <h1 class="display-4">RESTful Rooms</h1>
+</header>
+
+  <%= link_to "Add room", new_room_path, class: 'btn btn-primary btn-lg' %>
+
+  <div class="card">
+    <div class="card-block">
+      <ul>
+        <%= render @rooms %>
+      </ul>
+    </div>
+  </div>
+
+</header>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'room#index'
-  resources :rooms
+  root to: 'rooms#index'
+  resources :rooms, except: [:update, :edit, :destroy]
   resources :profiles
 end
