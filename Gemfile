@@ -40,7 +40,8 @@ group :development, :test do
   gem 'capybara'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-  gem 'bootstrap', '~> 4.0.0.alpha3'
+  gem 'bootstrap', '~> 4.0.0.alpha4'
+  gem 'dotenv-rails'
 end
 
 group :development do

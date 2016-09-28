@@ -9,3 +9,6 @@
 <p>
   Coordinates: <%= @room.latitude %> <%= @room.longitude %>
 </p>
+
+<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@room.latitude},#{@room.longitude}&markers=#{@room.latitude},#{@room.longitude}&zoom=7&size=640x400&key=AIzaSyCbwNGHwDjEOuQ5DuluSLmoZ4NLFMjfHQQ",
+              class: 'img-fluid img-rounded', alt: "#{@room.title} on the map"%>
