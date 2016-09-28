@@ -3,4 +3,7 @@ class Room < ActiveRecord::Base
 
   validates_presence_of :title
 
+  geocoded_by :address
+  after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
+
 end

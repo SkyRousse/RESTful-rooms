@@ -4,12 +4,16 @@ class RoomsController < ApplicationController
     @rooms = Room.order('created_at DESC')
   end
 
+  def show
+    @room = Room.find(params[:id])
+  end
+
   def new
     @room = Room.new
   end
 
   def create
-    @room = current_user.profile.rooms.new(room_params)
+    @room = Room.new(room_params)
     if @room.save
       flash[:success] = "Place Added"
       redirect_to "/"
@@ -23,5 +27,5 @@ class RoomsController < ApplicationController
   def room_params
     params.require(:room).permit(:title, :address)
   end
-  
+
 end
