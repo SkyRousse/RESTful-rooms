@@ -16,17 +16,21 @@ ActiveRecord::Schema.define(version: 20160928180343) do
   enable_extension "plpgsql"
 
   create_table "profiles", force: :cascade do |t|
-    t.string  "name",    default: "Anonymous"
-    t.integer "points",  default: 0
-    t.integer "user_id"
+    t.string   "name",       default: "Anonymous"
+    t.integer  "points",     default: 0
+    t.integer  "user_id"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
   end
 
   create_table "rooms", force: :cascade do |t|
-    t.string  "title"
-    t.text    "address"
-    t.float   "latitude"
-    t.float   "longitude"
-    t.integer "profile_id"
+    t.string   "title"
+    t.text     "address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.integer  "profile_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -39,6 +39,7 @@ group :development, :test do
   gem 'capybara'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'bootstrap', '~> 4.0.0.alpha3'
 end
 
 group :development do

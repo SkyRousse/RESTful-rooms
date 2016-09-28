@@ -6,6 +6,8 @@ class CreateRooms < ActiveRecord::Migration[5.0]
       t.float :latitude
       t.float :longitude
       t.integer :profile_id
+
+      t.timestamps
     end
   end
 end

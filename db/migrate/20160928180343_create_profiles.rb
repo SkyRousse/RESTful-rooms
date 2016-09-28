@@ -4,6 +4,8 @@ class CreateProfiles < ActiveRecord::Migration[5.0]
       t.string :name, :default => "Anonymous"
       t.integer :points, :default => 0
       t.integer :user_id
+
+      t.timestamps
     end
   end
 end
